@@ -1,10 +1,7 @@
 # Keyboard Wake Issues
 
 So an odd bug with Intel's 100 series chipsets and newer is that sometimes macOS requires a second keyboard press or some other wake event to power up the monitor as well, with some requiring a keypress+power button to wake. Well to fix this, we need to either:
-
-* [Set `acpi-wake-type` to the USB Controller(Recommended)](#method-1-add-wake-type-property-recommended)
-* [Create a fake ACPI Device](#method-2-create-a-fake-acpi-device)
-* [Disable darkwake(not ideal, as background tasks will also turn on the display)](#method-3-configuring-darkwake)
+[[toc]]
 
 You can find a great write up on the whole situation and the fixes here: [USB Fix](https://osy.gitbook.io/hac-mini-guide/details/usb-fix).
 

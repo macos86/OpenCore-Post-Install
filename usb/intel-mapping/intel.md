@@ -1,10 +1,10 @@
 # USB Mapping
 
-### This guide is  outdated, see [USBMap's README](https://github.com/corpnewt/USBMap) for updated information until this guide is rewritten
+[[toc]]
 
-Table of Contents:
-
-* [Intel USB Mapping](#Intel-usb-mapping)
+::: danger This guide is  outdated
+see [USBMap's README](https://github.com/corpnewt/USBMap) for updated information until this guide is rewritten
+:::
 
 So with the prerequisites out of the way, we can finally get to the meat of this guide. And now we get to finally read one of my favorite books before I go to bed each night: [The Advanced Configuration and Power Interface (ACPI) Specification!](https://uefi.org/sites/default/files/resources/ACPI_6_3_final_Jan30.pdf)
 
@@ -23,7 +23,7 @@ Here we're greeted with all the possible USB ports in ACPI:
 | 10 | Type C connector - USB 2.0 and USB 3.0 without Switch | Flipping the device **does** change the ACPI port. generally seen on 3.1/2 motherboard headers |
 | 255 | Proprietary connector | For Internal USB ports like Bluetooth |
 
-### Intel USB Mapping
+## Intel USB Mapping
 
 USB mapping on Intel is super easy mainly because both the ACPI is sane and more tools available for the platform. For this guide we'll be using the [USBmap tool](https://github.com/corpnewt/USBMap) from CorpNewt.
 

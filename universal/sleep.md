@@ -35,7 +35,7 @@ And something many people forget are over and under-clocks:
 
 ## Preparations
 
-**In macOS**:
+### In macOS
 
 Before we get in too deep, we'll want to first ready our system:
 
@@ -55,7 +55,7 @@ This will do 5 things for us:
 4. Disables wake from iPhone/Watch: Specifically when your iPhone or Apple Watch come near, the machine will wake
 5. Disables TCP Keep Alive mechanism to prevent wake ups every 2 hours
 
-**In your config.plist**:
+### In your config.plist
 
 While minimal changes are needed, here are the ones we care about:
 
@@ -65,7 +65,7 @@ While minimal changes are needed, here are the ones we care about:
   * `keepsyms=1` - Makes sure that if a kernel panic does happen during sleep, that we get all the important bits from it
   * `swd_panic=1` - Avoids issue where going to sleep results in a reboot, this should instead give us a kernel panic log
 
-**In your BIOS**:
+### In your BIOS
 
 * Disable:
   * Wake on LAN

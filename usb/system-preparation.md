@@ -1,10 +1,6 @@
 # System Preparation
 
-Table of Contents:
-
-* [System Preparation](#system-preparation)
-* [Checking what renames you need](#checking-what-renames-you-need)
-* [Parting ways](#parting-ways)
+[[toc]]
 
 So before we can USB map, we need to set a couple things:
 
@@ -127,7 +123,7 @@ If you're in the latter camp, you'll now want to add the needed ACPI renames to 
 * **[usb-rename.plist](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/usb-rename.plist)**
   * Simply copy over the required patches to your config.plist
 
-# Parting ways
+## Parting ways
 
 But now we must part into 2 sections, depending on which hardware you have:
 

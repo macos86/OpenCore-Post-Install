@@ -1,6 +1,6 @@
 # Vault
 
-**What is vaulting?**
+## What is vaulting?
 
 Well vaulting is based around 2 things, vault.plist and vault.sig:
 
@@ -13,7 +13,9 @@ The specifics of vaulting is that a 256 byte RSA-2048 signature of vault.plist w
 
 Do note that nvram.plist won't be vaulted so users with emulated NVRAM still have risk of someone adding/removing certain NVRAM variables
 
-**Settings in your config.plist**:
+## Setup
+
+### Settings in your config.plist
 
 * `Misc -> Security -> Vault`:
   * `Basic`: Requires just vault.plist to be present, mainly used for filesystem integrity verification
@@ -21,7 +23,7 @@ Do note that nvram.plist won't be vaulted so users with emulated NVRAM still hav
 * `Booter -> ProtectSecureBoot:` `YES`
   * Needed with Insyde firmwares for fixing secure boot keys and reporting violations
 
-**Setting up vault**:
+### Setting up vault
 
 Grab OpenCorePkg and open the `CreateVault` folder, inside we'll find the following:
 
@@ -39,7 +41,7 @@ Now we're ready to run `sign.command`:
 
 ![](../../images/post-install/security-md/sign-demo.png)
 
-**Disabling Vault after setup**:
+### Disabling Vault after setup
 
 If you're doing heavy troubleshooting or have the need to disable Vault, the main things to change:
 

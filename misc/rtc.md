@@ -38,11 +38,11 @@ For the rest of this guide, we're going to assume you've tested option 1(`Disabl
 
 Regarding splitting out chunks, what we'll be doing is omitting chunks of RTC regions until we've narrowed down far enough to the exact spot that's bad. You can see the below on how to start:
 
-#### 1. Testing RtcMemoryFixup
+### 1. Testing RtcMemoryFixup
 
 * To start, you'll need to add `rtcfx_exclude=00-FF` in boot-args. If after a reboot the RTC errors seems solved, this will tell you whether your CMOS errors are RTC related
 
-#### 2. Split 0x00-0xFF into 2
+### 2. Split 0x00-0xFF into 2
 
 * 0x00-0x7F and 0x80-0xFF
   * write down the excluded range which fixes the RTC errors and proceed by splitting more into chunks
@@ -51,13 +51,13 @@ Regarding splitting out chunks, what we'll be doing is omitting chunks of RTC re
   * Note you may also get a bad range of 7F-80, or even bad regions split into multiple sections(ex. 0x00-0x01 **and** 0x80-0x81)
   * You can use `rtcfx_exclude=00-01,7F-80` to resolve this
 
-#### 3. After testing which regions is bad, shrink even more
+### 3. After testing which regions is bad, shrink even more
 
 * Assuming our bad region was within 0x80-0xFF, you'd next split that into 2:
 * 0x80-0xBF and 0xC0-0xFF
   * if you had multiple ranges that are bad
 
-#### 4. And you'll continue on with this pattern until you've narrowed down the bad region. Note that you will need to reboot each time to test if you're still getting CMOS/Safe-mode errors
+### 4. And you'll continue on with this pattern until you've narrowed down the bad region. Note that you will need to reboot each time to test if you're still getting CMOS/Safe-mode errors
 
 * Also note that the final bad spot will usually be a range and not a singular spot.
 * ie. `rtcfx_exclude=85-86` instead of one singular value

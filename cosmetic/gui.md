@@ -1,9 +1,6 @@
 # OpenCore beauty treatment
 
-Main thing this guide will go over:
-
-* [Setting up OpenCore's GUI](#setting-up-opencores-gui)
-* [Setting up a boot-chime](#setting-up-boot-chime-with-audiodxe)
+[[toc]]
 
 ## Setting up OpenCore's GUI
 

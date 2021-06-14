@@ -78,7 +78,7 @@ So the process goes as follows:
 
 * I've also provided a bit more of a detailed map of what's changed in macOS versions, see below:
 
-**macOS Catalina**:
+### macOS Catalina
 
 * 10.15.0
   * [Requires proper EC](https://dortania.github.io/Getting-Started-With-ACPI/)
@@ -108,7 +108,7 @@ So the process goes as follows:
   * No change
   * Requires all previous fixes for 10.15.5
   
-**macOS Big Sur**:
+### macOS Big Sur
 
 * 11.0.1
   * See here: [OpenCore and macOS 11: Big Sur](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/)

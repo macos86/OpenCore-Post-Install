@@ -121,7 +121,7 @@ Here's one example. If we have an Intel i9-9900K and an RX 560, the configuratio
 
 Here's another example. This time, We have an Ryzen 3700X and an RX 480. Our configuration in this case is just "AMD", and we should be using either an iMac Pro or Mac Pro SMBIOS. Again, there are two options: no shiki arguments, and `shikigva=128`. We prefer hardware decoding over software decoding, so we'll choose the `shikigva=128` option, and again inject `shikigva` into our dGPU, this time with value `128`. A reboot and DRM works.
 
-**Notes:**
+### Notes
 
 * You can use [gfxutil](https://github.com/acidanthera/gfxutil/releases) to find the path to your iGPU/dGPU.
   * `path/to/gfxutil -f GFX0`

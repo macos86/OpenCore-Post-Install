@@ -1,5 +1,7 @@
 # Fixing audio with AppleALC
 
+[[toc]]
+
 So to start, we'll assume you already have Lilu and AppleALC installed, if you're unsure if it's been loaded correctly you can run the following in terminal(This will also check if AppleHDA is loaded, as without this AppleALC has nothing to patch):
 
 ```sh
@@ -107,15 +109,6 @@ For odd cases where RTC and HPET take IRQs from other devices like USB and audio
   * `Kernel -> Quirks -> PowerTimeoutKernelPanic -> True`
 
 ## Troubleshooting
-
-So for troubleshooting, we'll need to go over a couple things:
-
-* [Checking if you have the right kexts](#checking-if-you-have-the-right-kexts)
-* [Checking if AppleALC is patching correctly](#checking-if-applealc-is-patching-correctly)
-* [Checking AppleHDA is vanilla](#checking-applehda-is-vanilla)
-* [AppleALC working inconsistently](#applealc-working-inconsistently)
-* [AppleALC not working correctly with multiple sound cards](#applealc-not-working-correctly-with-multiple-sound-cards)
-* [AppleALC not working from Windows reboot](#applealc-not-working-from-windows-reboot)
 
 ### Checking if you have the right kexts
 

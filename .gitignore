@@ -1,7 +1,10 @@
-_book/
-.vuepress/dist
 node_modules/
 .vscode/
 .DS_Store
-package-lock.json
-yarn.lock
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

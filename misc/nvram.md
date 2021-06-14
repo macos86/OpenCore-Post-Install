@@ -7,7 +7,9 @@ So this section is for those who don't have native NVRAM, the most common hardwa
 
 For B360, B365, H310, H370, Z390 users, make sure you have [SSDT-PMC](https://dortania.github.io/Getting-Started-With-ACPI/) both under EFI/OC/ACPI and config.plist -> ACPI -> Add. For more info on making and compiling SSDTs, please see [**Getting started with ACPI**](https://dortania.github.io/Getting-Started-With-ACPI/)
 
-**Note**: 10th gen CPUs do not need this SSDT
+::: tip Note
+10th gen CPUs do not need this SSDT
+:::
 
 ## Cleaning out the Clover gunk
 

@@ -10,8 +10,6 @@ The exact reason for this error is a bit unknown, however ways to resolve this e
 
 For those who wish to attempt the legacy mapping way, see the below guide. Note it will require you to map all your DIMMs manually so this will be a time consuming process.
 
-## Mapping our memory
-
 To start, we'll want to grab the following files:
 
 * [CustomMemory.plist](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/CustomMemory.plist.zip)
@@ -25,25 +23,9 @@ Here is a premade file which has properties already set out for you, one you ope
 
 From here we see may properties, lets try to break it down:
 
-* [DataWidth](#datawidth)
-* [ErrorCorrection](#errorcorrection)
-* [FormFactor](#formfactor)
-* [MaxCapacity](#maxcapacity)
-* [TotalWidth](#totalwidth)
-* [Type](#type)
-* [TypeDetail](#typedetail)
-* [Devices](#devices)
-  * [AssetTag](#assettag)
-  * [BankLocator](#banklocator)
-  * [DeviceLocator](#devicelocator)
-  * [Manufacturer](#manufacturer)
-  * [PartNumber](#partnumber)
-  * [SerialNumber](#serialnumber)
-  * [Size](#size)
-  * [Speed](#speed)
-* [Cleaning up](#cleaning-up)
+[[toc]]
 
-### DataWidth
+## DataWidth
 
 Specifies the data width, in bits, of the memory. A DataWidth of 0 and a TotalWidth of 8 indicates that the device is being used solely to provide 8 error-correction bits.
 
@@ -64,7 +46,7 @@ path/to/dmidecode -t memory | grep "Data Width:"
 DataWidth = 64
 ```
 
-### ErrorCorrection
+## ErrorCorrection
 
 Specifies ECC support:
 
@@ -88,7 +70,7 @@ path/to/dmidecode -t memory | grep "Error Correction Type:"
 ErrorCorrection = 3
 ```
 
-### FormFactor
+## FormFactor
 
 Specifies Memory Form Factor
 
@@ -117,7 +99,7 @@ path/to/dmidecode -t memory | grep "Form Factor:"
 FormFactor = 9
 ```
 
-### MaxCapacity
+## MaxCapacity
 
 Specifies maximum supported memory in your system
 
@@ -132,7 +114,7 @@ Type: Bytes
 256GB - 274877906944
 ```
 
-### TotalWidth
+## TotalWidth
 
 Specifies the total width, in bits, of the memory, including any check or error-correction bits. If there are no error-correction bits, this value should be equal to DataWidth.
 
@@ -153,7 +135,7 @@ path/to/dmidecode -t memory | grep "Total Width:"
 TotalWidth = 72
 ```
 
-### Type
+## Type
 
 Specifies memory type
 
@@ -189,7 +171,7 @@ path/to/dmidecode -t memory | grep "Type:"
 Type = 26
 ```
 
-### TypeDetail
+## TypeDetail
 
 Specifies other memory type information
 
@@ -228,7 +210,7 @@ path/to/dmidecode -t memory | grep "Type Detail:"
 TypeDetail = 7
 ```
 
-### Devices
+## Devices
 
 Array of Memory Devices, and where we do out magic to fix the error. In the sample CustomMemory.plist I provided, we have 12 slots listed here. From this, you'll want to open up System Profiler in macOS and look at the Memory tab:
 
@@ -253,7 +235,7 @@ Next lets break down the properties:
 * [Size](#size)
 * [Speed](#speed)
 
-#### AssetTag
+### AssetTag
 
 To determine AssetTag, run the following:
 
@@ -266,7 +248,7 @@ path/to/dmidecode -t memory | grep "Asset Tag:"
 
 * If dmidecode prints `Not Specified`, you can simply leave this entry blank
 
-#### BankLocator
+### BankLocator
 
 To determine BankLocator, run the following:
 
@@ -279,7 +261,7 @@ path/to/dmidecode -t memory | grep "Bank Locator:"
 
 * If dmidecode prints `Not Specified`, you can simply leave this entry blank
 
-#### DeviceLocator
+### DeviceLocator
 
 To determine DeviceLocator, run the following:
 
@@ -309,7 +291,7 @@ Entry 11: DIMM_EMPTY
 Entry 12: DIMM_EMPTY
 ```
 
-#### Manufacturer
+### Manufacturer
 
 To determine Manufacturer, run the following:
 
@@ -320,7 +302,7 @@ path/to/dmidecode -t memory | grep "Manufacturer:"
 # Final Value
 ```
 
-#### PartNumber
+### PartNumber
 
 To determine PartNumber, run the following:
 
@@ -350,7 +332,7 @@ Entry 11: EmptyDIMM
 Entry 12: EmptyDIMM
 ```
 
-#### SerialNumber
+### SerialNumber
 
 To determine SerialNumber, run the following:
 
@@ -380,7 +362,7 @@ Entry 11: EmptyDIMM
 Entry 12: EmptyDIMM
 ```
 
-#### Size
+### Size
 
 Size of single memory stick in MB
 
@@ -423,7 +405,7 @@ Entry 11: 1
 Entry 12: 1
 ```
 
-#### Speed
+### Speed
 
 Speed of memory in Mhz
 

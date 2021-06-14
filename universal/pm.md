@@ -234,4 +234,6 @@ For some boards, you may need to ensure the following BIOS options are set for C
 
 While macOS might not officially support AMD CPU Power management, there are community efforts to add it. Specifically being [SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor). Note that when adding this kext, it should be after VirtualSMC in your config.plist as it's a plugin.
 
-**Warning**: This kext is known to create stability issues as well, if you're receiving random kernel panics or issues booting do keep in mind this kext may be the culprit.
+::: warning
+This kext is known to create stability issues as well, if you're receiving random kernel panics or issues booting do keep in mind this kext may be the culprit.
+:::

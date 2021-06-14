@@ -1,11 +1,6 @@
 # USB Mapping
 
-Table of Contents:
-
-* [AMD and 3rd Party USB Mapping](#amd-and-3rd-party-usb-mapping)
-* [Creating the map](#creating-the-map)
-* [Port mapping on screwed up DSDTs](#port-mapping-on-screwed-up-dsdts)
-* [Port mapping when you have multiple of the same controller](#port-mapping-when-you-have-multiple-of-the-same-controller)
+[[toc]]
 
 So with the prerequisites out of the way, we can finally get to the meat of this guide. And now we get to finally read one of my favorite books before I go to bed each night: [The Advanced Configuration and Power Interface (ACPI) Specification!](https://uefi.org/sites/default/files/resources/ACPI_6_3_final_Jan30.pdf)
 

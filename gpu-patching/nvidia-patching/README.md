@@ -13,7 +13,7 @@ To start off, we'll be assuming the following:
 * Lilu and WhateverGreen are loaded
   * verify by running `kextstat | grep -E "Lilu|WhateverGreen"`
   
-### Finding the GPU pathing
+## Finding the GPU pathing
 
 First lets grab [gfxutil](https://github.com/acidanthera/gfxutil/releases) and run the following:
 

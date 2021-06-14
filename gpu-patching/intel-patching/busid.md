@@ -164,9 +164,9 @@ For this example, we'll use the 0x3E9B0007 framebuffer again.
 
 To start, we'll be trying to go through entry 1's BusIDs in hope we find working value.
 
-##### 1. Here plug in your HDMI display
+#### 1. Here plug in your HDMI display
 
-##### 2. Set Port 1 to the HDMI connector type
+#### 2. Set Port 1 to the HDMI connector type
 
 * 01xx0900 **00080000** C7030000
 
