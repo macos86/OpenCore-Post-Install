@@ -39,11 +39,11 @@ Now we can shove that into our SSDT:
 
 ![](../../images/post-install/usb-md/usbw.png)
 
-Now with that done, you can compile and add it to your EFI and config.plist. See [Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/Manual/compile.html) for more info on compiling SSDTs
+Now with that done, you can compile and add it to your EFI and config.plist. See [Getting Started With ACPI](/Getting-Started-With-ACPI/Manual/compile.md) for more info on compiling SSDTs
 
 ## Method 3 - Configuring darkwake
 
-Before we get deep into configuring darkwake, it would be best to explain what darkwake is. A great in-depth thread by holyfield can be found here: [DarkWake on macOS Catalina](<https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-Argomenti> di avvio-darkwake8-darkwake10-are-obsolete/)
+Before we get deep into configuring darkwake, it would be best to explain what darkwake is. A great in-depth thread by holyfield can be found here: [DarkWake on macOS Catalina](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
 
 In its simplest form, you can think of darkwake as "partial wake", where only certain parts of your hardware are lit up for maintenance tasks while others remain asleep(ie. Display). Reason we may care about this is that darkwake can add extra steps to the wake process like keyboard press, but outright disabling it can make our hack wake randomly. So ideally we'd go through the below table to find an ideal value.
 
