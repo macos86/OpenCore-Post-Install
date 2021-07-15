@@ -44,14 +44,14 @@ Now with a list of supported layout IDs,  we're ready to try some out
 
 ## Testing your layout
 
-To test out our layout IDs, we're going to be using the boot-arg `alcid=xxx` where xxx is your layout. Remember that to try layout IDs **one at a time**. Do not add multiple IDs or alcid boot-args, if one doesn't work then try the next ID and etc
+To test out our layout IDs, we're going to be using the boot-arg `alcid=xxx` where xxx is your layout. Remember that to try layout IDs **one at a time**. Do not add multiple IDs or alcid Argomenti di avvio, if one doesn't work then try the next ID and etc
 
 ```
 config.plist
 ├── NVRAM
   ├── Add
     ├── 7C436110-AB2A-4BBB-A880-FE41995C9F82
-          ├── boot-args | String | alcid=11
+          ├── Argomenti di avvio | String | alcid=11
 ```
 
 ## Making Layout ID more permanent
@@ -185,7 +185,7 @@ This will check if the signature is valid for AppleHDA, if it's not then you're 
 
 Sometimes race conditions can occur where your hardware isn't initialized in time for AppleHDAController resulting in no sound output. To get around this, you can either:
 
-Specify in boot-args the delay:
+Specify in Argomenti di avvio the delay:
 
 ```
 alcdelay=1000
@@ -243,7 +243,7 @@ And with this done, you can reboot and AppleALC should now ignore your external 
 
 ### AppleALC not working from Windows reboot
 
-If you find that rebooting from Windows into macOS breaks audio, we recommend either adding `alctsel=1` to boot-args or add this property to your audio device in DeviceProperties:
+If you find that rebooting from Windows into macOS breaks audio, we recommend either adding `alctsel=1` to Argomenti di avvio or add this property to your audio device in DeviceProperties:
 
 ```
 DeviceProperties

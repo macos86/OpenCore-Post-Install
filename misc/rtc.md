@@ -31,7 +31,7 @@ For the rest of this guide, we're going to assume you've tested option 1(`Disabl
 * These regions will be in the hexadecimal counting system so in reality will be 0x00-0xFF
 * To omit bad regions, we use the boot-arg `rtcfx_exclude=00-FF`
   * Replace `00-FF` with your bad region (or regions)
-  * Reminder that `boot-args` is located under `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82` in your config.plist
+  * Reminder that `Argomenti di avvio` is located under `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82` in your config.plist
   * This will also require you to have [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup/releases/tag/1.0.6) in your config.plist and EFI/OC/Kexts folder.
 * There can be multiple bad regions
 * To find the bad region, we'll want to split out search into chunks
@@ -40,7 +40,7 @@ Regarding splitting out chunks, what we'll be doing is omitting chunks of RTC re
 
 ### 1. Testing RtcMemoryFixup
 
-* To start, you'll need to add `rtcfx_exclude=00-FF` in boot-args. If after a reboot the RTC errors seems solved, this will tell you whether your CMOS errors are RTC related
+* To start, you'll need to add `rtcfx_exclude=00-FF` in Argomenti di avvio. If after a reboot the RTC errors seems solved, this will tell you whether your CMOS errors are RTC related
 
 ### 2. Split 0x00-0xFF into 2
 

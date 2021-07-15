@@ -43,7 +43,7 @@ Now with that done, you can compile and add it to your EFI and config.plist. See
 
 ## Method 3 - Configuring darkwake
 
-Before we get deep into configuring darkwake, it would be best to explain what darkwake is. A great in-depth thread by holyfield can be found here: [DarkWake on macOS Catalina](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
+Before we get deep into configuring darkwake, it would be best to explain what darkwake is. A great in-depth thread by holyfield can be found here: [DarkWake on macOS Catalina](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-Argomenti di avvio-darkwake8-darkwake10-are-obsolete/)
 
 In its simplest form, you can think of darkwake as "partial wake", where only certain parts of your hardware are lit up for maintenance tasks while others remain asleep(ie. Display). Reason we may care about this is that darkwake can add extra steps to the wake process like keyboard press, but outright disabling it can make our hack wake randomly. So ideally we'd go through the below table to find an ideal value.
 
@@ -77,20 +77,20 @@ Now lets go through each bit:
 
 * Note that HID = Human-interface devices(Keyboards, mice, pointing devices, etc)
 
-To apply the above table to your system, it's as simple as grabbing calculator, adding up your desired darkwake values and then applying the final value to your boot-args. However we recommend trying 1 at a time rather than merging all at once, unless you know what you're doing(though you likely wouldn't be reading this guide).
+To apply the above table to your system, it's as simple as grabbing calculator, adding up your desired darkwake values and then applying the final value to your Argomenti di avvio. However we recommend trying 1 at a time rather than merging all at once, unless you know what you're doing(though you likely wouldn't be reading this guide).
 
 For this example, lets try and combine `kDarkWakeFlagHIDTickleLate` and `kDarkWakeFlagGraphicsPowerState1`:
 
 * `2`= kDarkWakeFlagHIDTickleLate
 * `512`= kDarkWakeFlagAudioNotSuppressed
 
-So our final value would be `darkwake=514`, which we can next place into boot-args:
+So our final value would be `darkwake=514`, which we can next place into Argomenti di avvio:
 
 ```
 NVRAM
 |---Add
   |---7C436110-AB2A-4BBB-A880-FE41995C9F82
-    |---boot-args | Sting | darkwake=514
+    |---Argomenti di avvio | Sting | darkwake=514
 ```
 
 The below is more for clarification for users who are already using darkwake or are looking into it, specifically clarifying what values no longer work:
