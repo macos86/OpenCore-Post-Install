@@ -36,7 +36,7 @@ And so with older SMBIOSes(one's not listed above), we need to make sure their p
 | Limit | Number | <0> |
 | Replace | Data | <53484349> |
 | Skip | Number | <0> |
-| Tablelength | Number | <0> |
+| TableLength | Number | <0> |
 | TableSignature | Data | <> |
 
 * **EHC1 to EH01**: Needed for Broadwell and older SMBIOS
@@ -50,7 +50,7 @@ And so with older SMBIOSes(one's not listed above), we need to make sure their p
 | Limit | Number | <0> |
 | Replace | Data | <45483031> |
 | Skip | Number | <0> |
-| Tablelength | Number | <0> |
+| TableLength | Number | <0> |
 | TableSignature | Data | <> |
 
 * **EHC2 to EH02**: Needed for Broadwell and older SMBIOS
@@ -64,7 +64,7 @@ And so with older SMBIOSes(one's not listed above), we need to make sure their p
 | Limit | Number | <0> |
 | Replace | Data | <45483032> |
 | Skip | Number | <0> |
-| Tablelength | Number | <0> |
+| TableLength | Number | <0> |
 | TableSignature | Data | <> |
 
 ## Checking what renames you need
