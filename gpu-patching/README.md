@@ -9,7 +9,7 @@ This section is dedicated to GPU patching, currently we support the following:
 * [Legacy iGPU patching](./legacy-Intel/README.md)
   * GMA series is supported
 
-## Nvidia Patching
+## NVIDIA Patching
 
-* [Legacy Nvidia Patching](./nvidia-patching/README.md)
+* [Legacy NVIDIA Patching](./nvidia-patching/README.md)
   * Tesla through Fermi series are supported

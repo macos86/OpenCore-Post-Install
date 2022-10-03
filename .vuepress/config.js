@@ -218,10 +218,10 @@ module.exports = {
 		                ]
 		            },
 		            {
-		                title: 'Legacy Nvidia',
+		                title: 'Legacy NVIDIA',
 		                collapsable: false,
 		                children: [
-		                    ['/gpu-patching/nvidia-patching/', 'Nvidia Patching'],
+		                    ['/gpu-patching/nvidia-patching/', 'NVIDIA Patching'],
 		                ]
 		            },
                 ]

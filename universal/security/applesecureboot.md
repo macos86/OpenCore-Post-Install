@@ -69,7 +69,7 @@ Currently the following options for `Misc -> Security -> SecureBootModel` are su
 * The list of cached drivers may be different, resulting in the need to change the list of Added or Forced kernel drivers.
   * ie. IO80211Family cannot be injected in this case, as it is already present in the kernelcache
 * Unsigned and several signed kernel drivers cannot be used
-  * This includes Nvidia's Web Drivers in 10.13
+  * This includes NVIDIA's Web Drivers in 10.13
 * System volume alterations on operating systems with sealing, like macOS 11, may result in the operating system being unbootable.
   * If you plan to disable macOS's APFS snapshots, please remember to disable SecureBootModel as well
 * Certain boot errors are more likely to be triggered with Secure Boot enabled that were previously not required

@@ -1,8 +1,8 @@
-# Legacy Nvidia Patching
+# Legacy NVIDIA Patching
 
 * Please note this page is more of an info dump, we won't be going to too great of detail on setup though we plan to expand this page more for it.
 
-With legacy Nvidia GPUs, macOS has difficulties enabling acceleration due to many missing properties. To work around this, we can inject properties into IOService for macOS to easily interpret.
+With legacy NVIDIA GPUs, macOS has difficulties enabling acceleration due to many missing properties. To work around this, we can inject properties into IOService for macOS to easily interpret.
 
 To start off, we'll be assuming the following:
 
@@ -35,7 +35,7 @@ PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)
 
 ### Building our DeviceProperties
 
-With Nvidia GPUs, there's actually not too many properties required for setup. The main ones that are recommended are the following:
+With NVIDIA GPUs, there's actually not too many properties required for setup. The main ones that are recommended are the following:
 
 | Property | Value | Comment |
 | :--- | :--- | :--- |

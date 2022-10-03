@@ -30,7 +30,7 @@ If you fail at this point, there's a couple things you can check for:
   * change GFX0 to IGPU
   * change PEG0 to GFX0
   * change HECI to IMEI
-  * [etc](/extras/Clover-config.md)
+  * [etc](/extras/clover/config.md)
 * Make sure Lilu and WhateverGreen are loaded
   * Make sure not to have any legacy graphics patches present as they've been absorbed into WhateverGreen:
     * IntelGraphicsFixup.kext
